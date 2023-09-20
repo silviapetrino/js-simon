@@ -8,7 +8,11 @@ const output = document.getElementById("output");
 
 
 // // 2. stampo la lista in pagina 
-output.innerHTML = randomNumbers().join(", ");
+const randomNum = randomNumbers().join(", ");
+
+output.innerHTML = randomNum
+
+console.log(randomNum);
 
 
 
@@ -21,13 +25,18 @@ setTimeout(function() {
 }, 5000);
 
 
+
 setTimeout(function() {
- insertNumbers();
+  const inserNumber = insertNumbers();
+  console.log(inserNumber)
 }
 , 5500)
 
 
-  //  6- confronto i due array ;
+
+
+
+//  6- confronto i due array ;
 
 
 
@@ -66,7 +75,6 @@ function insertNumbers() {
     } else userNumbers.push(oneNumber);
   }
 
-  console.log(userNumbers)
   return userNumbers;
 
 }
