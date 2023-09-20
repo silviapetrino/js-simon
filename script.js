@@ -7,13 +7,12 @@
 // 2 - Stampo la lista in pagina;
 
 
-// 3 -creo una funzione che genera 5 prompt con richiesta numeri;
+// 3 -creo una funzione che genera 5 prompt con richiesta numeri e inserisco i numeri in un nuovo array;
 
-// - creo una funzione per svuotare la pagina;
+// 4- creo una funzione per svuotare la pagina;
 
-//  - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
+//  5- Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
 
-//  - inserisco i numeri in un nuovo array;
 
 //  - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati;
 
@@ -27,7 +26,7 @@ output.innerHTML = randomNumbers()
 
 
 
-// - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
+// 5 - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
 
 
 
@@ -56,7 +55,7 @@ function randomNumbers() {
 
 }
 
-// 3.  richiedere i 5 numeri all'utente
+// 3.  richiedere i 5 numeri all'utente e li inserisce in un array
 
 function insertNumbers() {
   
