@@ -1,10 +1,3 @@
-// # js-simon
-// Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 5 secondi. Dopo 5 secondi i numeri scompaiono e l’utente deve inserire, tramite il prompt(), uno alla volta, i numeri che ha visto precedentemente. Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-
-
-// 1 - Creo una funzione che mi generi una lista di 5 numeri casuali;
-
-// 2 - Stampo la lista in pagina;
 
 
 // 3 -creo una funzione che genera 5 prompt con richiesta numeri e inserisco i numeri in un nuovo array;
@@ -18,6 +11,8 @@
 
 // - stampo il risultato;
 
+
+
 const output = document.getElementById("output");
 
 
@@ -30,15 +25,16 @@ output.innerHTML = randomNumbers()
 
 
 
-setTimeout(function() {
-  resetPage();
-}, 5000);
+// setTimeout(function() {
+//   resetPage();
+// }, 5000);
 
 
-setTimeout(function() {
- insertNumbers();
-}
-, 5500)
+// setTimeout(function() {
+//  insertNumbers();
+// }
+// , 5500)
+
 
 
 //1. generare una lista di cinque numeri casuali (da 1 a 50)
@@ -57,21 +53,22 @@ function randomNumbers() {
 
 // 3.  richiedere i 5 numeri all'utente e li inserisce in un array
 
+
 function insertNumbers() {
   
+  const userNumbers = [];
+
   for(i = 0; i < 5; i++) {
 
     let oneNumber = parseInt(prompt("Inserisci un numero per volta, quello che ricordi:"));
 
     if (isNaN(oneNumber)) {
       alert("Per favore inserisci un numero valido!");
-    }
-
-    if (oneNumber > 51 || oneNumber < 0) {
+    } else if (oneNumber > 51 || oneNumber < 0) {
       alert("Inserisci un numero da 1 a 50");
-    }
-
+    } else userNumbers.push(oneNumber);
   }
+  console.log(userNumbers);
 }
 
 // 4. funzione per svuotare la pagina 
