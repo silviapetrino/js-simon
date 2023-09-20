@@ -26,11 +26,20 @@ const output = document.getElementById("output");
 output.innerHTML = randomNumbers()
 
 
-// insertNumbers()
+
+// - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
 
 
 
-output.innerHTML = resetPage()
+setTimeout(function() {
+  resetPage();
+}, 5000);
+
+
+setTimeout(function() {
+ insertNumbers();
+}
+, 5500)
 
 
 //1. generare una lista di cinque numeri casuali (da 1 a 50)
@@ -69,5 +78,5 @@ function insertNumbers() {
 // 4. funzione per svuotare la pagina 
 
 function resetPage()  {
-  return document.innerHTML = "";
+  output.innerHTML = " ";
 }
