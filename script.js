@@ -6,18 +6,30 @@
 
 // 2 - Stampo la lista in pagina;
 
-// 3 - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;;
 
-// 4 - inserisco i numeri in un nuovo array;
+// 3 -creo una funzione che genera 5 prompt con richiesta numeri;
 
-// 5 - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati:
-// 6. stampo il risultato;
+// - creo una funzione per svuotare la pagina;
+
+//  - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
+
+//  - inserisco i numeri in un nuovo array;
+
+//  - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati;
+
+// - stampo il risultato;
 
 const output = document.getElementById("output");
 
 
 // 2. stampo la lista in pagina 
 output.innerHTML = randomNumbers()
+
+
+
+
+
+
 
 
 
@@ -36,5 +48,29 @@ function randomNumbers() {
 
   return numbersList;
 
+}
 
+// 3.  richiedere i 5 numeri all'utente
+
+function insertNumbers() {
+  
+  for(i = 0; i < 5; i++) {
+
+    let oneNumber = parseInt(prompt("Inserisci un numero per volta, quello che ricordi:"));
+
+    if (isNaN(oneNumber)) {
+      alert("Per favore inserisci un numero valido!");
+    }
+
+    if (oneNumber > 51 || oneNumber < 0) {
+      alert("Inserisci un numero da 1 a 50");
+    }
+
+  }
+}
+
+// 4. funzione per svuotare la pagina 
+
+function resetPage()  {
+  document.innerHTML = "";
 }
