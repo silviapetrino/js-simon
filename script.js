@@ -27,7 +27,7 @@ setTimeout(function() {
 , 5500)
 
 
-//  6- confronto i due array ;
+   //  6- confronto i due array ;
 
 
 
@@ -85,12 +85,18 @@ function resetPage()  {
 
 function compareLists(listOne, listTwo) {
   const checkedNumbers = [];
+  let howManyNumbers = 0;
 
   for (let i = 0; i < listOne.length; i++) {
     if (listTwo.includes(listOne[i])) {
       checkedNumbers.push(listOne[i]);
+      howManyNumbers++;
     }
   }
 
-  return checkedNumbers;
+  return {
+    commonNumbers: checkedNumbers,
+    count: checkedNumbers.length
+  };
+
 }
