@@ -6,17 +6,17 @@
 
 // 2 - Stampo la lista in pagina;
 
-// 3 - Imposto il tutto in una funzione setTimeOut di 5 sec;
+// 3 - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;;
 
-// 4 - imposto un ciclo di prompt per richiedere i numeri all'utente;
+// 4 - inserisco i numeri in un nuovo array;
 
-// 5 - inserisco i numeri in un nuovo array;
-
-// 6 - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati:
-// 7. stampo il risultato;
+// 5 - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati:
+// 6. stampo il risultato;
 
 const output = document.getElementById("output");
 
+
+// 2. stampo la lista in pagina 
 output.innerHTML = randomNumbers()
 
 
