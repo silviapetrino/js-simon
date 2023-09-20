@@ -25,15 +25,15 @@ output.innerHTML = randomNumbers()
 
 
 
-// setTimeout(function() {
-//   resetPage();
-// }, 5000);
+setTimeout(function() {
+  resetPage();
+}, 5000);
 
 
-// setTimeout(function() {
-//  insertNumbers();
-// }
-// , 5500)
+setTimeout(function() {
+ insertNumbers();
+}
+, 5500)
 
 
 
@@ -68,11 +68,33 @@ function insertNumbers() {
       alert("Inserisci un numero da 1 a 50");
     } else userNumbers.push(oneNumber);
   }
-  console.log(userNumbers);
+
+  console.log(userNumbers)
+  return userNumbers;
+
 }
+
 
 // 4. funzione per svuotare la pagina 
 
 function resetPage()  {
   output.innerHTML = " ";
+}
+
+
+
+
+// 5 - con una funzione confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati; Inserisco i numeri trovati in una nuova lista
+
+
+function compareLists(listOne, listTwo) {
+
+  const checkedNumbers = [];
+
+  for (i = 0; i < listOne.length; i++) {
+    if(listTwo.includes(listOne[i])) checkedNumbers.push(listOne[i]);
+  }
+
+  return checkedNumbers
+
 }
