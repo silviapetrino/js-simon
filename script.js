@@ -17,7 +17,7 @@ const output = document.getElementById("output");
 
 
 // // 2. stampo la lista in pagina 
-output.innerHTML = randomNumbers()
+output.innerHTML = randomNumbers().join(", ");
 
 
 
@@ -40,8 +40,6 @@ setTimeout(function() {
   const checkedNumbers = compareLists(randomNumbers(), insertNumbers());
   console.log(checkedNumbers);
 }, 15000);
-
-
 
 
 
@@ -100,11 +98,17 @@ function resetPage()  {
 function compareLists(listOne, listTwo) {
 
   const checkedNumbers = [];
+  let howManynumbers = 0;
 
   for (i = 0; i < listOne.length; i++) {
-    if(listTwo.includes(listOne[i])) checkedNumbers.push(listOne[i]);
+    if(listTwo.includes(listOne[i])) {
+      checkedNumbers.push(listOne[i]);
+    howManynumbers++}
+
   }
 
-  return checkedNumbers
+  return checkedNumbers.join(", "), howManynumbers;
 
 }
+
+
