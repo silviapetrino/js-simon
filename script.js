@@ -1,14 +1,5 @@
 
 
-// 3 -creo una funzione che genera 5 prompt con richiesta numeri e inserisco i numeri in un nuovo array;
-
-// 4- creo una funzione per svuotare la pagina;
-
-//  5- Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
-
-
-//  - confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati;
-
 // - stampo il risultato;
 
 
@@ -36,10 +27,7 @@ setTimeout(function() {
 , 5500)
 
 
-setTimeout(function() {
-  const checkedNumbers = compareLists(randomNumbers(), insertNumbers());
-  console.log(checkedNumbers);
-}, 15000);
+   //  6- confronto i due array ;
 
 
 
@@ -96,19 +84,13 @@ function resetPage()  {
 
 
 function compareLists(listOne, listTwo) {
-
   const checkedNumbers = [];
-  let howManynumbers = 0;
 
-  for (i = 0; i < listOne.length; i++) {
-    if(listTwo.includes(listOne[i])) {
+  for (let i = 0; i < listOne.length; i++) {
+    if (listTwo.includes(listOne[i])) {
       checkedNumbers.push(listOne[i]);
-    howManynumbers++}
-
+    }
   }
 
-  return checkedNumbers.join(", "), howManynumbers;
-
+  return checkedNumbers;
 }
-
-
