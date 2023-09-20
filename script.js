@@ -36,6 +36,17 @@ setTimeout(function() {
 , 5500)
 
 
+setTimeout(function() {
+  const checkedNumbers = compareLists(randomNumbers(), insertNumbers());
+  console.log(checkedNumbers);
+}, 15000);
+
+
+
+
+
+
+
 
 //1. generare una lista di cinque numeri casuali (da 1 a 50)
 
@@ -80,7 +91,6 @@ function insertNumbers() {
 function resetPage()  {
   output.innerHTML = " ";
 }
-
 
 
 
