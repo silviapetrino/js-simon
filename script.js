@@ -17,8 +17,7 @@
 
 const output = document.getElementById("output");
 
-randomNumbers()
-console.log(randomNumbers())
+output.innerHTML = randomNumbers()
 
 
 
@@ -30,7 +29,7 @@ console.log(randomNumbers())
 function randomNumbers() {
   const numbersList = [];
  
-  for(i = 0; i <= 5; i++) {
+  for(i = 0; i < 5; i++) {
     let randomNum = Math.floor(Math.random() * (50 - 1)) + 1;
     numbersList.push(randomNum);
   }
