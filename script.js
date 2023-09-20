@@ -27,7 +27,7 @@ setTimeout(function() {
 , 5500)
 
 
-   //  6- confronto i due array ;
+  //  6- confronto i due array ;
 
 
 
