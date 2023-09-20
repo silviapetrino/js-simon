@@ -22,18 +22,15 @@
 const output = document.getElementById("output");
 
 
-// 2. stampo la lista in pagina 
+// // 2. stampo la lista in pagina 
 output.innerHTML = randomNumbers()
 
 
+// insertNumbers()
 
 
 
-
-
-
-
-
+output.innerHTML = resetPage()
 
 
 //1. generare una lista di cinque numeri casuali (da 1 a 50)
@@ -72,5 +69,5 @@ function insertNumbers() {
 // 4. funzione per svuotare la pagina 
 
 function resetPage()  {
-  document.innerHTML = "";
+  return document.innerHTML = "";
 }
