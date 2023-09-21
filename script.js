@@ -7,8 +7,8 @@
 const output = document.getElementById("output");
 
 
-// // 2. stampo la lista in pagina 
-const randomNum = randomNumbers().join(", ");
+  // 2. stampo la lista in pagina 
+const randomNum = randomNumbers();
 
 output.innerHTML = randomNum
 
@@ -25,19 +25,25 @@ setTimeout(function() {
 }, 5000);
 
 
+let inserNumber;
 
 setTimeout(function() {
-  const inserNumber = insertNumbers();
-  console.log(inserNumber)
+  inserNumber = insertNumbers();
+  console.log(inserNumber);
 }
 , 5500)
 
 
 
 
-
 //  6- confronto i due array ;
 
+
+setTimeout(function() {
+  const result = compareListsAndDisplay(randomNum, inserNumber);
+  console.log(result)
+}
+, 15000)
 
 
 
@@ -91,20 +97,19 @@ function resetPage()  {
 // 5 - con una funzione confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati; Inserisco i numeri trovati in una nuova lista
 
 
-function compareLists(listOne, listTwo) {
+function compareListsAndDisplay(listOne, listTwo) {
   const checkedNumbers = [];
-  let howManyNumbers = 0;
 
   for (let i = 0; i < listOne.length; i++) {
     if (listTwo.includes(listOne[i])) {
       checkedNumbers.push(listOne[i]);
-      howManyNumbers++;
     }
   }
 
-  return {
-    commonNumbers: checkedNumbers,
-    count: checkedNumbers.length
-  };
+  const resultElement = document.getElementById("output");
 
+  resultElement.innerHTML = "Numeri comuni: " + checkedNumbers.join(", ") + "<br>Conteggio: " + checkedNumbers.length;
 }
+
+
+
