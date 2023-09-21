@@ -1,7 +1,5 @@
 
 
-// - stampo il risultato;
-
 
 
 const output = document.getElementById("output");
@@ -108,7 +106,7 @@ function compareListsAndDisplay(listOne, listTwo) {
 
   const resultElement = document.getElementById("output");
 
-  resultElement.innerHTML = "Numeri trovati: " + checkedNumbers.join(", ") + "<br>Parole trovate: " + checkedNumbers.length;
+  resultElement.innerHTML = "Numeri comuni: " + checkedNumbers.join(", ") + "<br>Parole trovate: " + checkedNumbers.length;
 }
 
 

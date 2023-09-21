@@ -1,19 +1,21 @@
-// # js-simon
-// Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 5 secondi. Dopo 5 secondi i numeri scompaiono e l’utente deve inserire, tramite il prompt(), uno alla volta, i numeri che ha visto precedentemente. Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+# js-simon
 
+Display 5 random numbers on the page. Then, a 5-second timer starts.
 
-- Creo una funzione che mi generi una lista di 5 numeri casuali;
+After 5 seconds, the numbers disappear, and the user must input, one at a time via prompt(), the numbers they saw previously. 
 
-- Stampo la lista in pagina;
+After all 5 numbers have been entered, the software indicates how many and which of the numbers to guess were correctly identified.
 
-- creo una funzione che genera 5 prompt con richiesta numeri e inserisco i numeri in un nuovo array;
+To do list:
 
-- creo una funzione per svuotare la pagina;
+  1. Generate a list of five random numbers between 1 and 50.
 
- - Imposto il setTimeOut di 5 sec: scompaiono i numeri e parte un ciclo di prompt per richiedere i numeri all'utente;
+  2.  Display the list on the page.
 
-- inserisco i numeri in un nuovo array;
+  3.  Ask the user to input five numbers and store them in an array.
 
--  confronto i due array e uso includes per verificare la presenza dei numeri e il n. di numeri individuati;
+  4.  Create a function to clear the page.
 
- - stampo il risultato;
+  5.  Create a function to compare the two arrays and use includes method to check for the presence of numbers and count them. Insert the found numbers into a new list.
+
+  6.  Compare the two arrays.
